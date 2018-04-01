@@ -4,7 +4,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.autograd import Variable
 import torch.nn.functional as F
-from env.tictactoe_env import TicTacToeEnv
+from envs.tictactoe_env import TicTacToeEnv
 import random
 from collections import deque
 

@@ -69,13 +69,11 @@ class TicTacToeEnv:
 
         if np.all(diagonal == player) or np.all(diagonalFliped == player):
             return True
-
         return False
 
     def _all_available(self):
-       for x, y in itertools.product(list(range(3)), list(range(3))):
-          if self.board[x][y] == 0:
-            yield (x, y)
+       indicies = np.argwhere(self.board == 0)
+       return tuple(map(tuple, indicies))
 
     def _make_move(self, action, player):
         self.board[action] = player

@@ -1,5 +1,5 @@
 import unittest
-from tictactoe_env import TicTacToeEnv
+from envs.tictactoe_env import TicTacToeEnv
 import numpy as np
 
 class MyTestCase(unittest.TestCase):
