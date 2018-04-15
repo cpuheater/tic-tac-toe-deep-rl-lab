@@ -1,5 +1,5 @@
 # tic-tac-toe-deep-rl-lab
-Cxperimenting with different deep reinforcement learning algorithms
+Experimenting with different deep reinforcement learning algorithms
 
 Deep Q-Learning
 
