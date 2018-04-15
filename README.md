@@ -1,2 +1,6 @@
 # tic-tac-toe-deep-rl-lab
-experimenting with different deep reinforcement learning algorithms
+Cxperimenting with different deep reinforcement learning algorithms
+
+Deep Q-Learning
+
+Policy Gradient
