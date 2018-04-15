@@ -9,7 +9,7 @@ from envs.tictactoe_env import TicTacToeEnv
 import random
 import collections
 
-env = TicTacToeEnv(illegal = -1, win= 1, draw= 0, lose = -1 ,default = 0)
+env = TicTacToeEnv(illegal = -1, win= 1, draw= 0, lose = -1 ,default = -0.1)
 use_cuda = torch.cuda.is_available()
 FloatTensor = torch.cuda.FloatTensor if use_cuda else torch.FloatTensor
 LongTensor = torch.cuda.LongTensor if use_cuda else torch.LongTensor
@@ -61,6 +61,7 @@ while True:
     action = m.sample()
     log_probs.append(m.log_prob(action))
     state, reward, done = env.step(action.data[0])
+    rewards.append(reward)
     step+=1
 
   total_reward += reward
@@ -74,8 +75,8 @@ while True:
   if(reward == env.illegal):
       illegal += 1
 
-  reward /= float(step)
-  rewards += ([reward] * step)
+  #reward /= float(step)
+  #rewards += ([reward] * step)
 
   if episode % batch_size == 0:
 
